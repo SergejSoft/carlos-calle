@@ -1,6 +1,7 @@
 import { Instagram, Phone } from 'lucide-react';
 import { Language } from '../types';
 import { translations } from '../data/translations';
+import { trackWhatsAppClick } from '../utils/analytics';
 
 interface Props {
   language: Language;
@@ -8,6 +9,10 @@ interface Props {
 
 export default function Contact({ language }: Props) {
   const t = translations[language];
+
+  const handleWhatsAppClick = () => {
+    trackWhatsAppClick('contact');
+  };
 
   return (
     <section id="contact" className="py-20 bg-gray-100">
@@ -20,6 +25,7 @@ export default function Contact({ language }: Props) {
             href="https://wa.me/34634774312"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={handleWhatsAppClick}
             className="flex items-center gap-2 bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-colors"
           >
             <Phone size={24} />
@@ -27,7 +33,7 @@ export default function Contact({ language }: Props) {
           </a>
           
           <a
-            href="https://www.instagram.com/carlos_calle_ccep/"
+            href="https://www.instagram.com/carloscallerodriguez76/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-purple-500 text-white px-6 py-3 rounded-lg hover:bg-purple-600 transition-colors"

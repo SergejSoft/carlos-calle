@@ -35,6 +35,8 @@ export default function Hero({ language }: Props) {
           backgroundImage: `url(${IMAGES.HERO_BG})`,
           willChange: 'opacity'
         }}
+        aria-label="Padel training court background"
+        role="img"
       />
       
       {/* Darker overlay for better text readability */}

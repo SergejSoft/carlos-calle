@@ -2,6 +2,7 @@ import { Phone } from 'lucide-react';
 import { Language } from '../types';
 import { translations } from '../data/translations';
 import { IMAGES } from '../constants/images';
+import { trackWhatsAppClick } from '../utils/analytics';
 
 interface Props {
   language: Language;
@@ -9,6 +10,10 @@ interface Props {
 
 export default function PrivateTraining({ language }: Props) {
   const t = translations[language];
+
+  const handleWhatsAppClick = () => {
+    trackWhatsAppClick('private-training-section');
+  };
 
   return (
     <section id="private" className="py-20 bg-white">
@@ -29,6 +34,7 @@ export default function PrivateTraining({ language }: Props) {
               href="https://wa.me/34634774312"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={handleWhatsAppClick}
               className="inline-flex items-center gap-2 bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-colors"
             >
               <Phone size={24} />
