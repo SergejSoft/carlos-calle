@@ -22,7 +22,7 @@ export default function PrivateTraining({ language }: Props) {
           <div className="relative">
             <img
               src={IMAGES.COACH}
-              alt="Carlos Calle - Padel Coach"
+              alt="Carlos Calle - Entrenador de Pádel Las Palmas"
               className="rounded-lg shadow-xl w-full"
             />
           </div>

@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Language } from '../types';
 import Hero from '../components/Hero';
+import Tournaments from '../components/Tournaments';
 import Contact from '../components/Contact';
 
 interface Props {
@@ -22,6 +23,7 @@ export default function Home({ language }: Props) {
   return (
     <>
       <Hero language={language} />
+      <Tournaments language={language} />
       <Contact language={language} />
     </>
   );

@@ -44,6 +44,7 @@ export default function Navbar({ language, onLanguageChange }: Props) {
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-gray-700 hover:text-blue-600">{t.nav.home}</Link>
             <Link to="/private" className="text-gray-700 hover:text-blue-600">{t.nav.private}</Link>
+            <Link to="/tournaments" className="text-gray-700 hover:text-blue-600">{t.nav.tournaments}</Link>
             <a href="#contact" onClick={handleContactClick} className="text-gray-700 hover:text-blue-600">
               {t.nav.contact}
             </a>
@@ -80,6 +81,13 @@ export default function Navbar({ language, onLanguageChange }: Props) {
               onClick={() => setIsOpen(false)}
             >
               {t.nav.private}
+            </Link>
+            <Link 
+              to="/tournaments" 
+              className="block px-3 py-2 text-gray-700 hover:text-blue-600"
+              onClick={() => setIsOpen(false)}
+            >
+              {t.nav.tournaments}
             </Link>
             <a 
               href="#contact"

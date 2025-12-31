@@ -4,6 +4,7 @@ import { Language } from './types';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import PrivateTraining from './pages/PrivateTraining';
+import Tournaments from './pages/Tournaments';
 
 function App() {
   const [language, setLanguage] = useState<Language>('es');
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home language={language} />} />
           <Route path="/private" element={<PrivateTraining language={language} />} />
+          <Route path="/tournaments" element={<Tournaments language={language} />} />
         </Routes>
       </div>
     </BrowserRouter>
