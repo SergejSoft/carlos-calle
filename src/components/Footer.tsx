@@ -44,6 +44,12 @@ export default function Footer({ language }: Props) {
                   {t.footer.contact}
                 </a>
               </li>
+              {/* SEO-only link - hidden from users but visible to crawlers */}
+              <li className="sr-only">
+                <a href="https://padel-camp.org/" className="hover:text-blue-400 transition-colors">
+                  Padel Camp
+                </a>
+              </li>
             </ul>
           </div>
 
