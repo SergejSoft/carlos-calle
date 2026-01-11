@@ -70,7 +70,7 @@ export default function Footer({ language }: Props) {
               </li>
               <li>
                 <a
-                  href="https://www.instagram.com/carloscallerodriguez76/"
+                  href="https://www.instagram.com/carloscalle_padelclub/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 hover:text-blue-400 transition-colors"

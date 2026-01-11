@@ -33,7 +33,7 @@ export default function Contact({ language }: Props) {
           </a>
           
           <a
-            href="https://www.instagram.com/carloscallerodriguez76/"
+            href="https://www.instagram.com/carloscalle_padelclub/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-purple-500 text-white px-6 py-3 rounded-lg hover:bg-purple-600 transition-colors"
