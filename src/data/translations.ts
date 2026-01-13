@@ -49,6 +49,12 @@ export const translations = {
       whyPadel: 'Why Padel?',
       contact: 'Contact',
       copyright: '© 2024 Carlos Calle. All rights reserved.',
+      trust: {
+        title: 'Rated 5 Stars on Google',
+        rating: '5.0',
+        reviews: 'Based on reviews',
+        viewReviews: 'View Reviews',
+      },
     },
     padelClubs: {
       title: 'Padel Clubs in Gran Canaria',
@@ -202,6 +208,12 @@ export const translations = {
       whyPadel: '¿Por qué Pádel?',
       contact: 'Contacto',
       copyright: '© 2024 Carlos Calle. Todos los derechos reservados.',
+      trust: {
+        title: 'Calificado con 5 Estrellas en Google',
+        rating: '5.0',
+        reviews: 'Basado en reseñas',
+        viewReviews: 'Ver Reseñas',
+      },
     },
     padelClubs: {
       title: 'Clubes de Pádel en Gran Canaria',
@@ -328,6 +340,12 @@ export const translations = {
       whyPadel: 'Warum Padel?',
       contact: 'Kontakt',
       copyright: '© 2024 Carlos Calle. Alle Rechte vorbehalten.',
+      trust: {
+        title: '5 Sterne bei Google bewertet',
+        rating: '5.0',
+        reviews: 'Basierend auf Bewertungen',
+        viewReviews: 'Bewertungen ansehen',
+      },
     },
     padelClubs: {
       title: 'Padel Clubs in Gran Canaria',
