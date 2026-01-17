@@ -10,6 +10,8 @@
   for = "/assets/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+    Content-Type = "application/javascript; charset=utf-8"
+    Access-Control-Allow-Origin = "*"
 
 # Headers for HTML files
 [[headers]]
@@ -18,10 +20,18 @@
     Cache-Control = "public, max-age=0, must-revalidate"
     X-Content-Type-Options = "nosniff"
 
+# Explicitly serve assets (must come before catch-all)
+[[redirects]]
+  from = "/assets/*"
+  to = "/assets/:splat"
+  status = 200
+  force = true
+
 # Redirect all non-file requests to index.html for SPA routing
-# Netlify serves actual files before applying redirects, so assets will work correctly
+# This should not catch assets due to the rule above
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false
 
