@@ -133,6 +133,24 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // #region agent log
+      console.log('[DEBUG] HTML loaded, root element check', {rootExists:!!document.getElementById('root'),documentReady:document.readyState,hypothesisId:'A'});
+      fetch('http://127.0.0.1:7244/ingest/e79e18d5-36f9-44f7-8ca2-35b47b4dab97',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'index.html:136',message:'HTML loaded, root element check',data:{rootExists:!!document.getElementById('root'),documentReady:document.readyState},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'A'})}).catch(()=>{});
+      // #endregion
+      window.addEventListener('error', function(e) {
+        // #region agent log
+        console.error('[DEBUG] Global error caught', {message:e.message,filename:e.filename,lineno:e.lineno,colno:e.colno,error:e.error?.toString(),hypothesisId:'B'});
+        fetch('http://127.0.0.1:7244/ingest/e79e18d5-36f9-44f7-8ca2-35b47b4dab97',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'index.html:error-handler',message:'Global error caught',data:{message:e.message,filename:e.filename,lineno:e.lineno,colno:e.colno,error:e.error?.toString()},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'B'})}).catch(()=>{});
+        // #endregion
+      });
+      window.addEventListener('unhandledrejection', function(e) {
+        // #region agent log
+        console.error('[DEBUG] Unhandled promise rejection', {reason:e.reason?.toString(),hypothesisId:'B'});
+        fetch('http://127.0.0.1:7244/ingest/e79e18d5-36f9-44f7-8ca2-35b47b4dab97',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'index.html:rejection-handler',message:'Unhandled promise rejection',data:{reason:e.reason?.toString()},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'B'})}).catch(()=>{});
+        // #endregion
+      });
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
