@@ -2,6 +2,9 @@
   command = "npm run build"
   publish = "dist"
 
+[build.environment]
+  NODE_VERSION = "20"
+
 # Headers for assets to ensure proper MIME types and caching
 [[headers]]
   for = "/assets/*"
