@@ -1,5 +1,3 @@
-# Serve assets directly (must come before catch-all)
-/assets/* /assets/:splat 200
-
-# SPA fallback - serve index.html for all other routes
+# SPA fallback - serve index.html for all routes
+# Netlify serves actual files (assets, images, etc.) before applying redirects
 /* /index.html 200
